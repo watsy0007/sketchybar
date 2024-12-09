@@ -70,6 +70,8 @@ popup_defaults=(
 # For a full list of all available item properties see:
 # https://felixkratz.github.io/SketchyBar/config/items
 
+sketchybar --add event aerospace_workspace_change
+
 sketchybar --bar "${bar_config[@]}" \
           --default \
           updates=when_shown \
@@ -81,12 +83,10 @@ sketchybar --bar "${bar_config[@]}" \
 # Left
 source "$PLUGIN_DIR/lock/item.sh"
 source "$PLUGIN_DIR/apple/item.sh"
-source "$PLUGIN_DIR/spaces/item.sh"
+source "$PLUGIN_DIR/aerospace/item.sh"
 
-# source "$PLUGIN_DIR/front-app/item.sh"
 
 # Right
-
 source "$PLUGIN_DIR/calendar/item.sh"
 source "$PLUGIN_DIR/control-center/item.sh"
 source "$PLUGIN_DIR/github/item.sh"
