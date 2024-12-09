@@ -5,7 +5,7 @@ for sid in $(aerospace list-workspaces --all); do
     --subscribe space.$sid aerospace_workspace_change \
     --set space.$sid \
     background.color=0x44ffffff \
-    background.corner_radius=20 \
+    background.corner_radius=6 \
     background.height=20 \
     background.border_color=0x00FFFF \
     padding_left=7 \
@@ -13,5 +13,5 @@ for sid in $(aerospace list-workspaces --all); do
     background.drawing=off \
     label="$sid" \
     click_script="aerospace workspace $sid" \
-    script="$CONFIG_DIR/plugins/aerospace.sh $sid"
+    script="$PLUGIN_DIR/aerospace/scripts/aerospace.sh $sid"
 done
